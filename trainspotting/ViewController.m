@@ -55,7 +55,7 @@ int secondsLeft;
     [self.view addSubview:self.imageView];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.7f target:self selector:@selector(onTimerEvent:) userInfo:nil repeats:YES];
-    self.flashView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 80, self.view.frame.size.width, 40)];
+    self.flashView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 65, self.view.frame.size.width, 30)];
     self.flashView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.flashView];
     
@@ -72,10 +72,10 @@ int secondsLeft;
 }
 
 - (void)showExpiration {
-    self.expirationView = [[UITextView alloc] initWithFrame:CGRectMake(80, self.view.frame.size.height - 47, self.view.frame.size.width - 120, 40)];
+    self.expirationView = [[UITextView alloc] initWithFrame:CGRectMake(67, self.view.frame.size.height - 42, self.view.frame.size.width - 120, 40)];
     self.expirationView.backgroundColor = [UIColor whiteColor];
     self.expirationView.textAlignment = NSTextAlignmentCenter;
-    [self.expirationView setFont:[UIFont systemFontOfSize:18.0f weight:UIFontWeightBold]];
+    [self.expirationView setFont:[UIFont systemFontOfSize:16.0f weight:UIFontWeightBold]];
     
     self.expirationView.text = @"Expires in 00:02:34:52";
     
@@ -95,18 +95,18 @@ int secondsLeft;
 }
 
 - (void)showClock {
-    self.clockView = [[UITextView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 155, self.view.frame.size.width, 40)];
+    self.clockView = [[UITextView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 133, self.view.frame.size.width, 40)];
     self.clockView.backgroundColor = [UIColor whiteColor];
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
     self.clockView.textAlignment = NSTextAlignmentCenter;
-    [self.clockView setFont:[UIFont systemFontOfSize:24.0f weight:UIFontWeightBold]];
+    [self.clockView setFont:[UIFont systemFontOfSize:21.0f weight:UIFontWeightBold]];
     [self.view addSubview:self.clockView];
     
-    self.dayView = [[UITextView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 120, self.view.frame.size.width, 40)];
+    self.dayView = [[UITextView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 40)];
     self.dayView.backgroundColor = [UIColor whiteColor];
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
     self.dayView.textAlignment = NSTextAlignmentCenter;
-    [self.dayView setFont:[UIFont systemFontOfSize:24.0f weight:UIFontWeightBold]];
+    [self.dayView setFont:[UIFont systemFontOfSize:21.0f weight:UIFontWeightBold]];
     [self.view addSubview:self.dayView];
 }
 
